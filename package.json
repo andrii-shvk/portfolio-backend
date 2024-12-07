@@ -22,6 +22,10 @@
     "@types/node": "^22.9.0",
     "@types/tunnel-ssh": "^5.0.4",
     "nodemon": "^3.1.7",
+<<<<<<< HEAD
     "typescript": "^5.7.2"
+=======
+    "ts-node": "^10.9.2"
+>>>>>>> c226ae67b3b5e06b030ac78436e643ad09c710aa
   }
 }

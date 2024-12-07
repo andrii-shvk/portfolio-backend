@@ -6,8 +6,8 @@ const client = new Pool({
     ssl: {
         rejectUnauthorized: false,
     },
-    host: process.env.DB_HOST,
-    port: Number(process.env.DB_PORT),
+    host: 'host.docker.internal',
+    port: Number(process.env.DB_CLIENTPORT), // tunnel
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DATABASE,
