@@ -14,7 +14,7 @@ app.use("/projects", userRouter);
 
 app.get('/health', (req, res) => {
     res.status(200).json({ status: 'healthy' });
-  });
+});
 
 client
     .connect()
