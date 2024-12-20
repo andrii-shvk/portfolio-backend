@@ -71,9 +71,9 @@ jobs:
       - name: Update ECS Service
         run: |
           IMAGE_TAG=$(git rev-parse --short HEAD)
-          TASK_REVISION=$(aws ecs describe-task-definition --task-definition portfolio | jq -r '.taskDefinition.revision')
+          TASK_REVISION=$(aws ecs describe-task-definition --task-definition portfolio-backend-task | jq -r '.taskDefinition.revision')
           aws ecs update-service \
             --cluster portfolio \
             --service portfolio-service \
             --force-new-deployment \
-            --task-definition portfolio:${TASK_REVISION}
+            --task-definition portfolio-backend-task:${TASK_REVISION}
