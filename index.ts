@@ -16,6 +16,10 @@ app.get('/health', (req, res) => {
     res.status(200).json({ status: 'healthy' });
 });
 
+app.get('/testroute', (req, res) => {
+    res.status(200).json({ status: 'test' });
+});
+
 client
     .connect()
     .then(() => console.log("Connected to the database!"))
